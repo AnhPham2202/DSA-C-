@@ -1,7 +1,4 @@
-// Given an array containing N integers, and an number S denoting a target sum
-// Find all distinct integers that can add up to form target sum. The numbers in each triplet should be ordered in asc order,
-// and triplets should be ordered too.
-// Return empty array if no such triplet exists.
+// https://leetcode.com/problems/3sum/
 #include <iostream>
 #include <vector>
 #include <algorithm>
