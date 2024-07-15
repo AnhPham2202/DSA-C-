@@ -9,15 +9,20 @@ int longestConsecutive(vector<int>& nums) {
         set.insert(n);
     }
 
-    int maxV = INT_MIN;
+    int maxV = 0;
 
     for (auto & n : nums) {
-        int pre = n - 1;
-        int count = 1;
-        while (set.find(pre) != set.end()) {
-            count++;
+        int head = n - 1;
+        if (set.find(head) == set.end()) {
+            int count = 0;
+            int val = n;
+            while (set.find(val) != set.end()) {
+                count++;
+                val++;
+            }
+            maxV = max(maxV, count);
         }
-        maxV = max(maxV, count);
+
     }
 
     return maxV;
